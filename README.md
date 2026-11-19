@@ -12,6 +12,8 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 - **Noter la présence** à chaque rencontre et repérer les membres à recontacter, sans présence depuis trois mois.
 - **Partager des ressources** proposées par les membres (fiches pratiques, outils, retours d'expérience, lectures) dans un catalogue filtrable.
 - **Recueillir un retour** après chaque rencontre avec un questionnaire anonyme au DSFR.
+- **Situer les structures** du réseau sur une carte au fond de l'IGN, avec une puce par type de structure et une fiche par lieu.
+- **Cartographier les liens entre acteurs** : coopérations, financements, conseils saisis à la main, rattachements des membres à leur structure et appartenance aux mêmes groupes. Trouver par qui passer pour atteindre une structure, repérer les acteurs isolés, positionner les structures selon leur influence et leur intérêt.
 - **Suivre la vie du réseau** dans un tableau de bord : membres actifs, rencontres tenues, présence et satisfaction, par groupe et par période.
 
 ## Ce que contient l'espace
@@ -20,6 +22,8 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 | --- | --- | --- |
 | **Rencontres** | [grist-reunion](https://github.com/lab17bis/grist-reunion) | Rencontres de tous les groupes : ordre du jour, séance, compte rendu, suivi des actions. Page *Feuilles de présence* pour noter qui était là. Tables `Reunions`, `Points`, `Decisions`, `Actions_reunion`, `Presences`. |
 | **Membres** | tables Grist | Liste des membres, fiche du membre et ses présences. Pages *Groupes* et *Structures*. Tables `Personnes`, `Groupes`, `Structures`. |
+| **Carte des structures** | [grist-carte](https://github.com/lab17bis/grist-carte) | Les structures du réseau sur une carte, avec leurs liens. Les adresses sans coordonnées se placent depuis la carte. Table `Structures` (colonnes `Adresse`, `Latitude`, `Longitude`). |
+| **Liens entre acteurs** | [grist-graphe](https://github.com/lab17bis/grist-graphe) | Graphe des structures et des membres, fiche de chaque acteur, chemin entre deux acteurs, positions influence / intérêt, liste accessible. Page *Liens* pour la table. Table `Liens`. |
 | **Ressources** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des ressources partagées. Page *Fiches* pour en ajouter, page *Régler les ressources* pour la présentation. Table `Ressources`. |
 | **Retours** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Retours reçus et page *Questionnaire de retour* pour concevoir et publier le questionnaire. Table `Retours`. |
 | **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord de la vie du réseau. Page *Régler les indicateurs* pour le modifier. |
@@ -41,6 +45,8 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 
 - **Groupes** : ajoutez vos groupes dans la page *Groupes*, puis reportez leur nom dans les réglages des rencontres (lien *Réglages* en bas du widget, liste des instances) et dans la question « À quelle rencontre avez-vous participé ? » du questionnaire.
 - **Présence** : après chaque rencontre, ajoutez une ligne par membre attendu dans *Feuilles de présence* (Présent, Excusé ou Absent). Le widget de réunion propose les noms de la table `Personnes` pour remplir les participants.
+- **Carte** : bouton *Réglages* en bas du panneau de la carte (couleur et icône de chaque type de structure, logo comme puce, regroupement). Renseignez l'adresse d'une structure puis *Placer ces adresses*.
+- **Liens entre acteurs** : ajoutez des liens depuis la fiche d'un acteur ; bouton *Réglages* pour choisir les tables d'acteurs et les sources de liens (par exemple la présence aux mêmes rencontres).
 - **Ressources** : remplacez les fiches d'exemple dans la page *Fiches* ; page *Régler les ressources* pour les sections, filtres et étiquettes.
 - **Questionnaire** : page *Questionnaire de retour*, puis onglet *Publication* pour obtenir le lien à envoyer après chaque rencontre.
 - **Indicateurs** : page *Régler les indicateurs*.
@@ -49,7 +55,7 @@ Les réglages sont enregistrés dans le document. Ils partagent les mêmes régl
 
 ## Données et droits d'accès
 
-L'espace n'installe **aucune règle d'accès** : toute personne invitée dans le document voit la liste des membres, leurs coordonnées et les présences. N'invitez que les personnes qui animent ou coordonnent le réseau, et adaptez au besoin les *Permissions avancées*. Le questionnaire de retour ne demande ni nom ni adresse : les retours sont anonymes.
+L'espace n'installe **aucune règle d'accès** : toute personne invitée dans le document voit la liste des membres, leurs coordonnées, les présences et les liens entre acteurs. N'invitez que les personnes qui animent ou coordonnent le réseau, et adaptez au besoin les *Permissions avancées*. Le questionnaire de retour ne demande ni nom ni adresse : les retours sont anonymes. Les colonnes `Influence` et `Interet` ne sont proposées que pour les structures : qualifier des personnes nommées est un traitement de données personnelles, à éviter ou à encadrer.
 
 Les tables `Personnes` et `Structures`, quand l'espace en contient, suivent la règle commune des widgets : un widget de la famille ajouté plus tard les reprend et les complète, au lieu d'en créer d'autres.
 
@@ -61,6 +67,8 @@ Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est 
 - [grist-catalogue](https://github.com/lab17bis/grist-catalogue) : catalogue de fiches au DSFR, avec recherche et filtres.
 - [grist-graphique](https://github.com/lab17bis/grist-graphique) : tableaux de bord et indicateurs à seuils au DSFR.
 - [grist-reunion](https://github.com/lab17bis/grist-reunion) : ordres du jour, notes, décisions, actions et comptes rendus.
+- [grist-carte](https://github.com/lab17bis/grist-carte) : carte interactive au fond IGN, puces personnalisées et fiches.
+- [grist-graphe](https://github.com/lab17bis/grist-graphe) : cartographie des acteurs et de leurs liens, matrice influence / intérêt.
 
 ## Autres espaces
 
@@ -68,6 +76,7 @@ Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est 
 - [espace-collaboratif](https://github.com/lab17bis/espace-collaboratif) : faire ensemble : réunions, projets partagés et ressources communes d'une équipe.
 - [espace-accompagnement](https://github.com/lab17bis/espace-accompagnement) : suivre les personnes qui sollicitent un service : offre de service, sollicitations, fiches contact et satisfaction.
 - [espace-sondage](https://github.com/lab17bis/espace-sondage) : concevoir un questionnaire, savoir qui a répondu et lire les résultats en indicateurs.
+- [espace-contributions](https://github.com/lab17bis/espace-contributions) : faire participer : boîte à idées, valorisation des réalisations des équipes, votes et suites données.
 
 ## Écosystème
 
@@ -76,7 +85,7 @@ Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est 
 
 ## Mots-clés
 
-Grist, espace Grist, modèle Grist, document clé en main, réseau, communauté de pratique, animation de réseau, groupe de travail, codéveloppement, rencontres, feuille de présence, ressources partagées, questionnaire de retour, tableau de bord, DSFR, Système de design de l'État, La Suite numérique, service public, logiciel libre.
+Grist, espace Grist, modèle Grist, document clé en main, réseau, communauté de pratique, animation de réseau, groupe de travail, codéveloppement, rencontres, feuille de présence, ressources partagées, questionnaire de retour, tableau de bord, carte, cartographie des acteurs, graphe, liens, DSFR, Système de design de l'État, La Suite numérique, service public, logiciel libre.
 
 ## Licence
 
