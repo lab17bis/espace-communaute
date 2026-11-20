@@ -1,20 +1,20 @@
-# espace-reseau
+# espace-communaute
 
-> **Espace Grist clé en main.** Un document Grist prêt à l'emploi pour **animer un réseau ou une communauté de pratique** : ses membres et leurs groupes, les rencontres et la présence, les ressources que les membres partagent et leurs retours, au Système de design de l'État (DSFR).
+> **Espace Grist clé en main.** Un document Grist prêt à l'emploi pour **animer une communauté de pratique ou un réseau** : ses membres et leurs groupes, les rencontres et la présence, les ressources que les membres partagent et leurs retours, au Système de design de l'État (DSFR).
 
 Un **espace** est un document Grist complet — tables, formules, pages, widgets et réglages — à importer en une fois. Il assemble des widgets de la famille `grist-…` autour d'une manière de travailler. Chaque widget reste utilisable seul.
 
 ## À quoi ça sert
 
-- **Tenir la liste des membres** avec leur structure, leur fonction, leur rôle dans le réseau et les groupes auxquels ils appartiennent.
+- **Tenir la liste des membres** avec leur structure, leur fonction, leur rôle dans la communauté et les groupes auxquels ils appartiennent.
 - **Organiser des groupes** (groupes de travail, groupes de codéveloppement, communautés thématiques, rencontres plénières) avec leur animation, leurs membres et leur rythme.
 - **Préparer et tenir les rencontres** : ordre du jour, notes, décisions, actions et compte rendu. Chaque groupe est une instance de réunion.
 - **Noter la présence** à chaque rencontre et repérer les membres à recontacter, sans présence depuis trois mois.
-- **Partager des ressources** proposées par les membres (fiches pratiques, outils, retours d'expérience, lectures) dans un catalogue filtrable.
+- **Partager des ressources** (fiches pratiques, outils, retours d'expérience, lectures) dans un catalogue filtrable. Les membres en proposent depuis le document ou, sans y avoir accès, par un formulaire public ; la coordination relit chaque proposition avant de la publier.
 - **Recueillir un retour** après chaque rencontre avec un questionnaire anonyme au DSFR.
-- **Situer les structures** du réseau sur une carte au fond de l'IGN, avec une puce par type de structure et une fiche par lieu.
+- **Situer les structures** de la communauté sur une carte au fond de l'IGN, avec une puce par type de structure et une fiche par lieu.
 - **Cartographier les liens entre acteurs** : coopérations, financements, conseils saisis à la main, rattachements des membres à leur structure et appartenance aux mêmes groupes. Trouver par qui passer pour atteindre une structure, repérer les acteurs isolés, positionner les structures selon leur influence et leur intérêt.
-- **Suivre la vie du réseau** dans un tableau de bord : membres actifs, rencontres tenues, présence et satisfaction, par groupe et par période.
+- **Suivre la vie de la communauté** dans un tableau de bord : membres actifs, rencontres tenues, présence et satisfaction, par groupe et par période.
 
 ## Ce que contient l'espace
 
@@ -22,17 +22,18 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 | --- | --- | --- |
 | **Rencontres** | [grist-reunion](https://github.com/lab17bis/grist-reunion) | Rencontres de tous les groupes : ordre du jour, séance, compte rendu, suivi des actions. Page *Feuilles de présence* pour noter qui était là. Tables `Reunions`, `Points`, `Decisions`, `Actions_reunion`, `Presences`. |
 | **Membres** | tables Grist | Liste des membres, fiche du membre et ses présences. Pages *Groupes* et *Structures*. Tables `Personnes`, `Groupes`, `Structures`. |
-| **Carte des structures** | [grist-carte](https://github.com/lab17bis/grist-carte) | Les structures du réseau sur une carte, avec leurs liens. Les adresses sans coordonnées se placent depuis la carte. Table `Structures` (colonnes `Adresse`, `Latitude`, `Longitude`). |
+| **Carte des structures** | [grist-carte](https://github.com/lab17bis/grist-carte) | Les structures de la communauté sur une carte, avec leurs liens. Les adresses sans coordonnées se placent depuis la carte. Table `Structures` (colonnes `Adresse`, `Latitude`, `Longitude`). |
 | **Liens entre acteurs** | [grist-graphe](https://github.com/lab17bis/grist-graphe) | Graphe des structures et des membres, fiche de chaque acteur, chemin entre deux acteurs, positions influence / intérêt, liste accessible. Page *Liens* pour la table. Table `Liens`. |
 | **Ressources** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des ressources partagées. Page *Fiches* pour en ajouter, page *Régler les ressources* pour la présentation. Table `Ressources`. |
+| **Proposer une ressource** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Formulaire public pour proposer une ressource sans accès au document. La proposition arrive dans `Ressources`, non publiée, en attente de relecture. |
 | **Retours** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Retours reçus et page *Questionnaire de retour* pour concevoir et publier le questionnaire. Table `Retours`. |
-| **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord de la vie du réseau. Page *Régler les indicateurs* pour le modifier. |
+| **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord de la vie de la communauté. Page *Régler les indicateurs* pour le modifier. |
 
 ## L'installer en 2 minutes
 
 1. **Télécharger** le fichier de l'espace :
-   - [`espace-reseau.grist`](https://github.com/lab17bis/espace-reseau/raw/main/espace-reseau.grist) : l'espace vide, prêt à l'usage ;
-   - [`espace-reseau-exemple.grist`](https://github.com/lab17bis/espace-reseau/raw/main/espace-reseau-exemple.grist) : le même, rempli de données fictives, pour essayer.
+   - [`espace-communaute.grist`](https://github.com/lab17bis/espace-communaute/raw/main/espace-communaute.grist) : l'espace vide, prêt à l'usage ;
+   - [`espace-communaute-exemple.grist`](https://github.com/lab17bis/espace-communaute/raw/main/espace-communaute-exemple.grist) : le même, rempli de données fictives, pour essayer.
 2. **L'importer dans Grist** : depuis l'accueil de votre espace Grist, *Ajouter › Importer un document*, puis choisissez le fichier.
 3. **L'ouvrir** : les pages et les widgets sont déjà en place. Si Grist le demande, confirmez l'accès complet des widgets au document.
 4. **Inviter l'équipe** (*Partager*), en éditeur pour celles et ceux qui saisissent.
@@ -48,6 +49,7 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 - **Carte** : bouton *Réglages* en bas du panneau de la carte (couleur et icône de chaque type de structure, logo comme puce, regroupement). Renseignez l'adresse d'une structure puis *Placer ces adresses*.
 - **Liens entre acteurs** : ajoutez des liens depuis la fiche d'un acteur ; bouton *Réglages* pour choisir les tables d'acteurs et les sources de liens (par exemple la présence aux mêmes rencontres).
 - **Ressources** : remplacez les fiches d'exemple dans la page *Fiches* ; page *Régler les ressources* pour les sections, filtres et étiquettes.
+- **Proposer une ressource** : page *Proposer une ressource*, puis onglet *Publication* pour obtenir le lien du formulaire. Une proposition arrive avec la case *Publiée* décochée : cochez-la après relecture.
 - **Questionnaire** : page *Questionnaire de retour*, puis onglet *Publication* pour obtenir le lien à envoyer après chaque rencontre.
 - **Indicateurs** : page *Régler les indicateurs*.
 
@@ -55,7 +57,7 @@ Les réglages sont enregistrés dans le document. Ils partagent les mêmes régl
 
 ## Données et droits d'accès
 
-L'espace n'installe **aucune règle d'accès** : toute personne invitée dans le document voit la liste des membres, leurs coordonnées, les présences et les liens entre acteurs. N'invitez que les personnes qui animent ou coordonnent le réseau, et adaptez au besoin les *Permissions avancées*. Le questionnaire de retour ne demande ni nom ni adresse : les retours sont anonymes. Les colonnes `Influence` et `Interet` ne sont proposées que pour les structures : qualifier des personnes nommées est un traitement de données personnelles, à éviter ou à encadrer.
+L'espace n'installe **aucune règle d'accès** : toute personne invitée dans le document voit la liste des membres, leurs coordonnées, les présences et les liens entre acteurs. N'invitez que les personnes qui animent ou coordonnent la communauté, et adaptez au besoin les *Permissions avancées*. Le questionnaire de retour ne demande ni nom ni adresse : les retours sont anonymes. Le formulaire de proposition permet seulement **d'ajouter** une ressource, non publiée. Les colonnes `Influence` et `Interet` ne sont proposées que pour les structures : qualifier des personnes nommées est un traitement de données personnelles, à éviter ou à encadrer.
 
 Les tables `Personnes` et `Structures`, quand l'espace en contient, suivent la règle commune des widgets : un widget de la famille ajouté plus tard les reprend et les complète, au lieu d'en créer d'autres.
 
@@ -85,7 +87,7 @@ Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est 
 
 ## Mots-clés
 
-Grist, espace Grist, modèle Grist, document clé en main, réseau, communauté de pratique, animation de réseau, groupe de travail, codéveloppement, rencontres, feuille de présence, ressources partagées, questionnaire de retour, tableau de bord, carte, cartographie des acteurs, graphe, liens, DSFR, Système de design de l'État, La Suite numérique, service public, logiciel libre.
+Grist, espace Grist, modèle Grist, document clé en main, communauté de pratique, réseau, animation de communauté, animation de réseau, groupe de travail, codéveloppement, rencontres, feuille de présence, ressources partagées, questionnaire de retour, tableau de bord, carte, cartographie des acteurs, graphe, liens, DSFR, Système de design de l'État, La Suite numérique, service public, logiciel libre.
 
 ## Licence
 
