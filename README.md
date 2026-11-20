@@ -63,10 +63,6 @@ Les tables `Personnes` et `Structures`, quand l'espace en contient, suivent la r
 
 Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est entièrement fictif.
 
-## Le reconstruire
-
-Le dossier [`outils/`](outils) contient de quoi reconstruire l'espace dans un document Grist neuf, par exemple pour l'adapter : `construire.js` (le constructeur commun) et `espace-communaute.js` (la description de l'espace : tables, formules, pages, widgets, réglages et données fictives). Les deux s'exécutent dans la console du navigateur, sur une page Grist où vous êtes connecté. La plupart des personnes n'en ont pas besoin : importer le fichier `.grist` suffit.
-
 ## Widgets utilisés
 
 - [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) : questionnaires au DSFR avec logique conditionnelle et notes sur une échelle.
