@@ -22,6 +22,7 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 | --- | --- | --- |
 | **Rencontres** | [grist-reunion](https://github.com/lab17bis/grist-reunion) | Rencontres de tous les groupes : ordre du jour, séance, compte rendu, suivi des actions. Page *Feuilles de présence* pour noter qui était là. Tables `Reunions`, `Points`, `Decisions`, `Actions_reunion`, `Presences`. |
 | **Membres** | tables Grist | Liste des membres, fiche du membre et ses présences. Pages *Groupes* et *Structures*. Tables `Personnes`, `Groupes`, `Structures`. |
+| **Annuaire** | [grist-annuaire](https://github.com/lab17bis/grist-annuaire) | Personnes et structures du document : recherche, fiches, structures en arborescence, doublons et fusion, import CSV, archivage. Tables `Personnes`, `Structures` et `Comptes`, partagées avec les autres outils de l'espace. |
 | **Carte des structures** | [grist-carte](https://github.com/lab17bis/grist-carte) | Les structures de la communauté sur une carte, avec leurs liens. Les adresses sans coordonnées se placent depuis la carte. Table `Structures` (colonnes `Adresse`, `Latitude`, `Longitude`). |
 | **Liens entre acteurs** | [grist-graphe](https://github.com/lab17bis/grist-graphe) | Graphe des structures et des membres, fiche de chaque acteur, chemin entre deux acteurs, positions influence / intérêt, liste accessible. Page *Liens* pour la table. Table `Liens`. |
 | **Ressources** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des ressources partagées. Page *Fiches* pour en ajouter, page *Régler les ressources* pour la présentation. Table `Ressources`. |
@@ -44,6 +45,7 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 
 ## Le régler
 
+- **Annuaire** : onglet *Réglages* du widget (champs prévus et personnalisés, types de structures, délai de conservation, mention d'information, règles d'accès). Cochez *Gestionnaire de l'annuaire* sur la fiche des personnes qui tiennent l'annuaire.
 - **Groupes** : ajoutez vos groupes dans la page *Groupes*, puis reportez leur nom dans les réglages des rencontres (lien *Réglages* en bas du widget, liste des instances) et dans la question « À quelle rencontre avez-vous participé ? » du questionnaire.
 - **Présence** : après chaque rencontre, ajoutez une ligne par membre attendu dans *Feuilles de présence* (Présent, Excusé ou Absent). Le widget de réunion propose les noms de la table `Personnes` pour remplir les participants.
 - **Carte** : bouton *Réglages* en bas du panneau de la carte (couleur et icône de chaque type de structure, logo comme puce, regroupement). Renseignez l'adresse d'une structure puis *Placer ces adresses*.
@@ -57,7 +59,7 @@ Les réglages sont enregistrés dans le document. Ils partagent les mêmes régl
 
 ## Données et droits d'accès
 
-L'espace n'installe **aucune règle d'accès** : toute personne invitée dans le document voit la liste des membres, leurs coordonnées, les présences et les liens entre acteurs. N'invitez que les personnes qui animent ou coordonnent la communauté, et adaptez au besoin les *Permissions avancées*. Le questionnaire de retour ne demande ni nom ni adresse : les retours sont anonymes. Le formulaire de proposition permet seulement **d'ajouter** une ressource, non publiée. Les colonnes `Influence` et `Interet` ne sont proposées que pour les structures : qualifier des personnes nommées est un traitement de données personnelles, à éviter ou à encadrer.
+L'espace contient les **règles d'accès de l'annuaire** sur `Personnes`, `Structures` et `Comptes` : propriétaires et gestionnaires de l'annuaire gèrent les fiches, les éditeurs modifient la leur et celles qu'ils ont créées, les lecteurs consultent, un visiteur anonyme ne voit aucune personne. Les autres tables (présences, liens entre acteurs, groupes) restent accessibles à toute personne invitée : n'invitez que les personnes qui animent ou coordonnent la communauté, et adaptez au besoin les *Permissions avancées*. Le questionnaire de retour ne demande ni nom ni adresse : les retours sont anonymes. Le formulaire de proposition permet seulement **d'ajouter** une ressource, non publiée. Les colonnes `Influence` et `Interet` ne sont proposées que pour les structures : qualifier des personnes nommées est un traitement de données personnelles, à éviter ou à encadrer.
 
 Les tables `Personnes` et `Structures`, quand l'espace en contient, suivent la règle commune des widgets : un widget de la famille ajouté plus tard les reprend et les complète, au lieu d'en créer d'autres.
 
@@ -68,6 +70,7 @@ Les fichiers de ce dépôt ne contiennent aucune donnée réelle. L'exemple est 
 - [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) : questionnaires au DSFR avec logique conditionnelle et notes sur une échelle.
 - [grist-catalogue](https://github.com/lab17bis/grist-catalogue) : catalogue de fiches au DSFR, avec recherche et filtres.
 - [grist-graphique](https://github.com/lab17bis/grist-graphique) : tableaux de bord et indicateurs à seuils au DSFR.
+- [grist-annuaire](https://github.com/lab17bis/grist-annuaire) : annuaire des personnes et des structures d'un document : recherche, fiches, doublons, import, protection des données.
 - [grist-reunion](https://github.com/lab17bis/grist-reunion) : ordres du jour, notes, décisions, actions et comptes rendus.
 - [grist-carte](https://github.com/lab17bis/grist-carte) : carte interactive au fond IGN, puces personnalisées et fiches.
 - [grist-graphe](https://github.com/lab17bis/grist-graphe) : cartographie des acteurs et de leurs liens, matrice influence / intérêt.
