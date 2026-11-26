@@ -9,7 +9,6 @@ Les fichiers de l'espace évoluent sans casser ce qui existe : un document déj�
   - style commun de configuration (grist-annuaire, grist-carte, grist-graphe, grist-reunion) : il ne masque plus que le badge « Enregistré » sur l'onglet de l'outil ;
   - grist-catalogue : « Vérifier l'accès public » explique précisément pourquoi un document n'est pas lisible (partage, règle d'accès, table introuvable, copie non enregistrée).
 
-
 ### Ajouté
 - Brancher un outil sur un document qui a déjà ses propres tables (grist-reunion, grist-carte, grist-graphe, grist-annuaire) : si une table du même nom existe sans toutes les colonnes attendues, l'outil le signale et propose de les ajouter, avec le conseil de renommer d'abord une colonne qui porte la même information sous un autre nom. Rien à refaire dans cet espace : ses tables sont complètes.
 
