@@ -2,6 +2,13 @@
 
 Les fichiers de l'espace évoluent sans casser ce qui existe : un document déjà importé garde son fonctionnement.
 
+## 2026-11-26 (correctifs des widgets)
+
+### Corrigé
+- Correctifs des widgets utilisés par cet espace, pris en compte sans rien réinstaller (rechargez la page) :
+  - style commun de configuration (grist-annuaire, grist-carte, grist-graphe, grist-reunion) : il ne masque plus que le badge « Enregistré » sur l'onglet de l'outil ;
+  - grist-catalogue : « Vérifier l'accès public » explique précisément pourquoi un document n'est pas lisible (partage, règle d'accès, table introuvable, copie non enregistrée).
+
 ## 2026-11-26 (questionnaire enrichi)
 
 ### Modifié
