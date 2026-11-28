@@ -25,10 +25,10 @@ Un **espace** est un document Grist complet — tables, formules, pages, widgets
 | **Annuaire** | [grist-annuaire](https://github.com/lab17bis/grist-annuaire) | Personnes et structures du document : recherche, fiches, structures en arborescence, doublons et fusion, import CSV, archivage. Tables `Personnes`, `Structures` et `Comptes`, partagées avec les autres outils de l'espace. |
 | **Carte des structures** | [grist-carte](https://github.com/lab17bis/grist-carte) | Les structures de la communauté sur une carte, avec leurs liens. Les adresses sans coordonnées se placent depuis la carte. Table `Structures` (colonnes `Adresse`, `Latitude`, `Longitude`). |
 | **Liens entre acteurs** | [grist-graphe](https://github.com/lab17bis/grist-graphe) | Graphe des structures et des membres, fiche de chaque acteur, chemin entre deux acteurs, positions influence / intérêt, liste accessible. Page *Liens* pour la table. Table `Liens`. |
-| **Ressources** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des ressources partagées. Page *Fiches* pour en ajouter, page *Régler les ressources* pour la présentation. Table `Ressources`. |
+| **Ressources** | [grist-catalogue](https://github.com/lab17bis/grist-catalogue) | Catalogue des ressources partagées. Page *Fiches* pour en ajouter, page *Éditeur des ressources* pour la présentation. Table `Ressources`. |
 | **Proposer une ressource** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Formulaire public pour proposer une ressource sans accès au document. La proposition arrive dans `Ressources`, non publiée, en attente de relecture. |
 | **Retours** | [grist-questionnaire](https://github.com/lab17bis/grist-questionnaire) | Retours reçus et page *Questionnaire de retour* pour concevoir et publier le questionnaire. Table `Retours`. |
-| **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord de la vie de la communauté. Page *Régler les indicateurs* pour le modifier. |
+| **Indicateurs** | [grist-graphique](https://github.com/lab17bis/grist-graphique) | Tableau de bord de la vie de la communauté. Page *Éditeur des indicateurs* pour le modifier. |
 
 ## L'installer en 2 minutes
 
@@ -50,10 +50,10 @@ Les widgets sont chargés depuis leur **adresse stable** (`…/v1/`) : une évol
 - **Présence** : après chaque rencontre, ajoutez une ligne par membre attendu dans *Feuilles de présence* (Présent, Excusé ou Absent). Le widget de réunion propose les noms de la table `Personnes` pour remplir les participants.
 - **Carte** : bouton *Réglages* en bas du panneau de la carte (couleur et icône de chaque type de structure, logo comme puce, regroupement). Renseignez l'adresse d'une structure puis *Placer ces adresses*.
 - **Liens entre acteurs** : ajoutez des liens depuis la fiche d'un acteur ; bouton *Réglages* pour choisir les tables d'acteurs et les sources de liens (par exemple la présence aux mêmes rencontres).
-- **Ressources** : remplacez les fiches d'exemple dans la page *Fiches* ; page *Régler les ressources* pour les sections, filtres et étiquettes.
+- **Ressources** : remplacez les fiches d'exemple dans la page *Fiches* ; page *Éditeur des ressources* pour les sections, filtres et étiquettes.
 - **Proposer une ressource** : page *Proposer une ressource*, puis onglet *Publication* pour obtenir le lien du formulaire. Une proposition arrive avec la case *Publiée* décochée : cochez-la après relecture.
 - **Questionnaire** : page *Questionnaire de retour*, puis onglet *Publication* pour obtenir le lien à envoyer après chaque rencontre.
-- **Indicateurs** : page *Régler les indicateurs*.
+- **Indicateurs** : page *Éditeur des indicateurs*.
 
 Les réglages sont enregistrés dans le document. Ils partagent les mêmes réglages d'en-tête et de pied de page.
 
