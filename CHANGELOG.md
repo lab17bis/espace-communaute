@@ -2,6 +2,9 @@
 
 Les fichiers de l'espace évoluent sans casser ce qui existe : un document déjà importé garde son fonctionnement.
 
+
+## 2026-11-28 (document public)
+- Sécurité : les ressources non publiées (colonne `publie` décochée) ne sont plus lisibles sans compte quand le document est rendu public pour la page publique du catalogue. Règle d'accès ajoutée aux deux fichiers `.grist`.
 ## 2026-11-28 (noms des éditeurs)
 - Les pages de réglage s'appellent désormais « Éditeur des indicateurs », « Éditeur des ressources », « Éditeur de l'offre de service », « Éditeur du questionnaire » (au lieu de « Régler … » et « Concevoir le questionnaire »), et chaque vue de configuration a pour titre « Éditeur du widget ». Fichiers .grist (vide et exemple) et README mis à jour ; aucune table ni aucun réglage ne change.
 
